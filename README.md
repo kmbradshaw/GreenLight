@@ -1,25 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GreenLight is an application that allows Users to easily set there status between Green and Red. Red indicates they can't move any further on a project. Green indicates that they are still working. Dashboard displays status of every member on their team. 
 
-Things you may want to cover:
+* Ruby version : 5.0
 
-* Ruby version
+* CURRENTLY IN DEVELOPMENT 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
