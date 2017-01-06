@@ -1,0 +1,17 @@
+<section class="container">
+	<div class="register-signin-form">
+		<h1>Register</h1>
+
+		<%= form_for @user, html: {class: "form-group"} do |f| %>
+		  <%= f.label :name %>
+		  <%= f.text_field :name %><br>
+		  <%= f.label :email %>
+		  <%= f.text_field :email %><br>
+		  <%= f.label :password %>
+		  <%= f.password_field :password, class: 'form-group password'%><br>
+		  <%= submit_tag("Sign Up")%>
+		<% end %>
+	</div>
+
+	<div id="placeholder-sidebar"></div>
+	</section>

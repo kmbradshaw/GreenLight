@@ -1,0 +1,322 @@
+h1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 60px;
+	text-align: center;
+}
+
+h2 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+/* Forms - input types not currently in use commented out*/
+
+.form-group{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/*.form-group input[type="number_field"],
+*/.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color:#8a97a0;
+    margin-bottom: 20px;
+}
+
+
+
+.form-group .password {
+ 	border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color:#8a97a0;
+    margin-bottom: 20px;
+ }
+
+.form-group input[type="submit"],
+.form-group input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #006666;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="submit"]:hover,
+.form-group input[type="button"]:hover
+{
+    background: gray;
+}
+
+#errors {
+    color: tomato;
+}
+
+#page-wrapper {
+     margin: 0 auto;
+}
+
+/*NAV BAR CSS*/
+
+nav {
+  margin: -8px;
+  font-size: 80%;
+  background-color: white;
+}
+
+nav #logo {
+    display: inline;
+    font-size: 50px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    vertical-align: top;
+}
+
+
+.nav-links {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 50px;
+    float: right;
+    text-decoration: none;
+    font-size: 15px;
+
+}
+
+/* Sessions#index */
+
+#section-homepage-login {
+    margin: -10px;
+    padding: 30px;
+}
+
+#section-homepage-login h1 {
+margin: 0; 
+font-size: 76px;
+}
+
+#section-about-intro {
+    height: 300px;
+    text-align: center;
+    background:  #6A742A;
+    margin: 15px -10px auto;
+    color: white;
+}
+
+#section-about-intro h2{
+    font-family: 'PT Sans Narrow', sans-serif;
+    display: inline-block;
+    margin: 50px 300px 0px;
+}
+
+#section-about-intro h3 {
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-bottom: 50px;
+}
+#section-homepage-login::after {
+    content: "";
+    background: url(computer.jpg);
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+
+#section-about-managers{
+    height: 100%;
+    text-align: center;
+    background:   #819615;
+    margin-left: -10px;
+    margin-right: -10px;
+    color: white;
+}
+
+.preview {
+    max-width: 800px;
+    margin: 20px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+#section-about-managers h2 {
+    display: inline-block;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-bottom: 0px;
+}
+
+
+/* User#index */
+
+#section-current-status-green {
+    height: 100%;
+    text-align: center;
+    background-color:  #f4f7f8;
+    padding: 20px;
+    border-radius: 20px;
+    border-left: solid 15px #6A742A;
+    border-right: solid 15px #6A742A;
+    color: #6A742A;
+    margin: 25px 100px 0;
+}
+
+#section-current-status-green h1{
+    margin: 0;
+    font-size: 72px;
+}
+
+#section-current-status-red {
+    height: 100%;
+    text-align: center;
+    background-color:  #f4f7f8;
+    padding: 20px;
+    border-radius: 20px;
+    border-left: solid 15px  #b30000;
+    border-right: solid 15px  #b30000;
+    color:  #b30000;
+    margin: 25px 100px 0;
+}
+
+#section-current-status-red h1{
+    margin: 0;
+    font-size: 72px;
+}
+.container {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+}
+
+#redlights {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    margin-bottom: 100px;
+
+}
+
+#greenlights {
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    margin-bottom: 100px;
+
+}
+
+.container #redlights h3 {
+   font-size: 75px;
+   text-align: center;
+   margin: 0 100px;
+   background:  #d27979;
+   border-radius: 15px 50px;
+}
+
+.container #greenlights h3 {
+   font-size: 75px;
+   text-align: center;
+   margin: 0 100px;
+   background: #bbbb77;
+   border-radius: 50px 15px;
+}
+
+#redlights ul li {
+    list-style: none;
+    background: #D3D3D3;
+    margin: 0 100px;
+    padding: 15px;
+}
+
+#redlights #name-font-size {
+    font-size: 20px;
+}
+
+#greenlights ul li {
+    list-style: none;
+    background: #D3D3D3 ;
+    margin-right: 130px;
+    margin-left: 65px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.register-signin-form {
+    position: absolute;
+    left: 0px;
+    width: 50%;
+    background-color: #f4f7f8;
+    height: 100vh;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+#placeholder-sidebar{
+    position: absolute;
+    border-left: solid 15px #A9A9A9 ;
+    right: 0px;
+    width: 50%;
+    height: 100vh;
+    background-color: #bbbb77;
+
+}
+
+.register-signin-form h1 {
+    text-align: left;
+    margin: 75px 70px 0;
+
+}
+
+.center {
+    text-align: center;
+}
+

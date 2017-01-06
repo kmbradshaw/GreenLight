@@ -1,0 +1,46 @@
+<% if current_user.redlight == nil %>
+<section id="section-current-status-green">
+<p id='errors'><%= flash[:notice] %></p>
+	<h1>You are in the Green</h1>
+	<%= form_for @redlight, html: {class: "form-group"}  do |f| %>
+	  <%= f.text_area :problems, placeholder: "Optional - Describe the Issue",cols: 30, rows: 5%><br>
+	  <%= f.submit "Switch to Red"%>
+	<% end %>
+</section>
+<% else %>
+<section id="section-current-status-red">
+	<h1>You are in the Red</h1>
+	<%= form_for @redlight, html: {class: "form-group"}, :url => { :action => 'destroy', :controller=>"redlights", :id => @user_redlight.id}, method: :delete do |f| %>
+		<%= f.submit "Switch to Green"%>
+	<% end %>
+</section>
+<% end %>
+
+
+<section class="container">
+<!-- Switch to Team name when teams exists -->
+	<h1>PLACEHOLDER TEXT</h1>
+	<div id="greenlights">
+		<h3>Green Light</h3>
+		<% @users.each do |user| %>
+			<% if user.redlight == nil %>
+			<ul>
+				<li><%= user.name %></li>
+			</ul>
+			<%end %>
+		<% end %>
+	</div>
+
+	<div id="redlights">
+		<h3>Red Light</h3>
+		<% @redlights.each do |redlight| %>
+			<ul>
+				<li id="name-font-size"><%= redlight.user.name %></li>
+				<% if redlight.problems.length > 0 %>
+					<li><%= redlight.problems %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</div>
+</section>
+

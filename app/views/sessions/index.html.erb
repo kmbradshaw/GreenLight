@@ -1,0 +1,32 @@
+<section id="section-homepage-login">
+<% if logged_in? %>
+ 	<h1>Welcome Back <%= @user.name %>!</h1>
+ 	<!-- dashboard snapshot -->
+ 	<h2><%= link_to "Check Out your Dashboard for more Information", '/dashboard'%></h2>
+<% else %>
+	<h1>Welcome to GreenLight!</h1>
+
+	<%= form_tag('/login', class: "form-group") do %>
+	<%= label_tag(:email, "Email:") %>
+	<%= text_field_tag(:email) %>
+	<%= label_tag(:password, "Password:") %>
+	<%= password_field_tag :password, nil, class: 'form-group password'%>
+	<%= submit_tag("Login") %>
+	<% end %>
+<% end %>
+
+</section>
+
+<section id="section-about-intro">
+<h2>GreenLight allows you to easily update your project status and see the status of team members.</h2>
+<h3>Spend less time stuck and more time working. Request help when you need it, move on when you don't.</h3>
+</section>
+
+<section id="section-about-managers">
+<h2>Team Managers can easily track the status of their Team.</h2>
+<%= image_tag('preview', class: "preview") %>
+</section>
+
+<section id="section-get-started">
+<h2>Ready to get started? <%= link_to "Sign up now.", new_user_path %></h2>
+</section>

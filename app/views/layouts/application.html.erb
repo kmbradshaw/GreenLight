@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<link href="https://fonts.googleapis.com/css?ffamily=PT+Sans+Narrow:700|Open+Sans|Bevan" rel="stylesheet">
+  <title>Redlight - Greenlight</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "projectshow", "data-turbolinks-track" => true  %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render "shared/navbar" %>
+
+  <center><p id='errors'><%= flash[:access] %></p></center>
+	<div id="page-wrapper">
+		<%= yield %>
+	</div>
+  </body>
+</html>
