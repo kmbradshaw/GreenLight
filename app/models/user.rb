@@ -6,11 +6,11 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  def working_on(project)
-    project.users.include?(self)
-  end
-
-  def unique_projects
-    self.projects.distinct
+  def greenlight?
+    if self.redlight
+      false
+    else
+      true
+    end
   end 
 end

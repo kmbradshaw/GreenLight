@@ -2,6 +2,16 @@
 <% if logged_in? %>
  	<h1>Welcome Back <%= @user.name %>!</h1>
  	<!-- dashboard snapshot -->
+ 	<div id="homepage-snapshot">
+ 		<h3> There are <%= @redlights.count %> Red Lights on your Team </h3>
+ 		<h3> You are currently in the 
+ 				<% if @greenlight == false %>
+ 					Red </h3>
+ 				<% else %>
+ 					Green</h3>
+ 				<% end %>
+
+ 			</div>
  	<h2><%= link_to "Check Out your Dashboard for more Information", '/dashboard'%></h2>
 <% else %>
 	<h1>Welcome to GreenLight!</h1>
