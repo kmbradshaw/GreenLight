@@ -1,7 +1,6 @@
 <section id="section-homepage-login">
 <% if logged_in? %>
  	<h1>Welcome Back <%= @user.name %>!</h1>
- 	<!-- dashboard snapshot -->
  	<div id="homepage-snapshot">
  		<h3> There are <%= @redlights.count %> Red Lights on your Team </h3>
  		<h3> You are currently in the 
