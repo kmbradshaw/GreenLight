@@ -1,8 +1,13 @@
 <!-- this view should stay for the folks who are opposed to JS and like to have no use of there browser but I'm going to AJAX this to keep with the 'all one one page feel' -->
+<section class="container">
+	<div class="register-signin-form">
+		<h1>Edit Your Red Light</h1>
 
-<h1>Edit Your Red Light</h1>
+		<%= form_for @user_redlight, :html => {:class => "form-group"}, :url => {:action => 'update', :id => @user_redlight.id} do |f| %>
+		 	  <%= f.text_area :problems,cols: 30, rows: 10 %><br>
+			  <%= f.submit "Save Changes"%>
+		<% end %>
+	</div>
 
-<%= form_for @user_redlight, :html => {:class => "form-group"}, :url => {:action => 'update', :id => @user_redlight.id} do |f| %>
- 	  <%= f.text_area :problems %><br>
-	  <%= f.submit "Save Changes"%>
-<% end %>
+	<div id="placeholder-sidebar"></div>
+</section>
