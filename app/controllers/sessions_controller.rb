@@ -5,8 +5,10 @@ class SessionsController < ApplicationController
   end
 
   def index
+    @redlights = Redlight.all
     if session[:user_id]
     @user = User.find(session[:user_id])
+    @greenlight = @user.greenlight?
   end
   end 
 

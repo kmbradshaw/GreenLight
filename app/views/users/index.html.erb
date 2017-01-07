@@ -37,8 +37,12 @@
 			<ul>
 				<li id="name-font-size"><%= redlight.user.name %></li>
 				<% if redlight.problems.length > 0 %>
+					<% if redlight == @user_redlight %>
+						<li><%= redlight.problems %> This is mine</li>
+				<% else %>
 					<li><%= redlight.problems %></li>
 				<% end %>
+					<% end %>
 			</ul>
 		<% end %>
 	</div>

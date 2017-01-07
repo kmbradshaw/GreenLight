@@ -320,3 +320,9 @@ font-size: 76px;
     text-align: center;
 }
 
+#homepage-snapshot {
+    background-color: #f4f7f8;
+    padding: 40px;
+    margin: auto 250px auto;
+    border-radius: 25px;
+}
