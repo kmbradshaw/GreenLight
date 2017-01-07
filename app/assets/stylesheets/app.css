@@ -326,3 +326,8 @@ font-size: 76px;
     margin: auto 250px auto;
     border-radius: 25px;
 }
+
+.edit {
+    max-width: 20px;
+    float: right;
+}

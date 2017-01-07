@@ -16,6 +16,23 @@ class RedlightsController < ApplicationController
     end
   end
 
+  def edit
+    @user_redlight = Redlight.find_by(user_id: session[:user_id])
+  end
+
+  def update
+    @users = User.all
+    @redlights = Redlight.all
+    @user_redlight = Redlight.find(params[:id])
+    if @user_redlight.user_id == session[:user_id]
+      @user_redlight.update_attributes(redlight_params)
+      redirect_to '/dashboard'
+    else
+      flash[:access] = "Unauthorized access, please contact your administrator if you believe this error is incorrect."
+      redirect_to '/dashboard'
+    end
+  end
+
   def destroy
   	@redlight = Redlight.find_by(user_id: session[:user_id])
   	@redlight.destroy

@@ -35,14 +35,18 @@
 		<h3>Red Light</h3>
 		<% @redlights.each do |redlight| %>
 			<ul>
-				<li id="name-font-size"><%= redlight.user.name %></li>
 				<% if redlight.problems.length > 0 %>
 					<% if redlight == @user_redlight %>
-						<li><%= redlight.problems %> This is mine</li>
-				<% else %>
-					<li><%= redlight.problems %></li>
-				<% end %>
+						<li id="name-font-size"><%= redlight.user.name %>
+						<%= link_to image_tag("edit.png", class: 'edit'), edit_redlight_path(@user_redlight) %></li>
+						<li><%= redlight.problems %> </li>
+					<% else %>
+						<li id="name-font-size"><%= redlight.user.name %></li>
+						<li><%= redlight.problems %></li>
 					<% end %>
+			<% else %>
+				<li id="name-font-size"><%= redlight.user.name %></li>
+			<% end %>
 			</ul>
 		<% end %>
 	</div>
