@@ -1,4 +1,6 @@
-<h1>Edit a Your Red Light</h1>
+<!-- this view should stay for the folks who are opposed to JS and like to have no use of there browser but I'm going to AJAX this to keep with the 'all one one page feel' -->
+
+<h1>Edit Your Red Light</h1>
 
 <%= form_for @user_redlight, :html => {:class => "form-group"}, :url => {:action => 'update', :id => @user_redlight.id} do |f| %>
  	  <%= f.text_area :problems %><br>
