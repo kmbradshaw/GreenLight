@@ -36,9 +36,9 @@
 		<% @redlights.each do |redlight| %>
 			<ul>
 				<li id="name-font-size"><%= redlight.user.name %></li>
-				<% if redlight.problems.length > 0 %>
+				<% if redlight.problems %>
 					<% if redlight == @user_redlight %>
-						<li><%= redlight.problems %> This is mine</li>
+						<li><%= redlight.problems %> <%= link_to "edit", edit_redlight_path(@user_redlight.id) %></li>
 				<% else %>
 					<li><%= redlight.problems %></li>
 				<% end %>
